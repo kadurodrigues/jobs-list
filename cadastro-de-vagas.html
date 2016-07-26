@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cadastro de Vagas</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<div class="container">
+
+	<form class="cadastro-de-vagas">
+		
+		<div class="form-control col-4">
+			<label for="tagsProfessional">Professional</label>
+			<select name="tagsProfessional" class="professional" onchange="showKnowledge(this)">
+				<option value="0">Select</option>
+				<option value="1">.Net Developer</option>
+				<option value="2">Java Developer</option>
+				<option value="3">PHP Developer</option>
+				<option value="4">Ruby Developer</option>
+				<option value="5">Python Developer</option>
+				<option value="6">Front-End Developer</option>
+				<option value="7">Analista de Negócios</option>
+			</select>
+
+			<div id="1" class="knowledge hide">		
+				<div class="check-group">
+					<label> <input type="checkbox" name="knowledge" value="aspnet"> AspNet </label>
+					<label> <input type="checkbox" name="knowledge" value="mvc"> MVC </label>
+					<label> <input type="checkbox" name="knowledge" value="rest"> Rest API </label>
+					<label> <input type="checkbox" name="knowledge" value="xamarin"> Xamarin </label>
+				</div>	
+			</div>
+
+			<div id="2" class="knowledge hide">		
+				<div class="check-group">
+					<label> <input type="checkbox" name="knowledge" value="spring"> Spring 4.2 </label>
+					<label> <input type="checkbox" name="knowledge" value="springData"> Spring Data JPA </label>
+					<label> <input type="checkbox" name="knowledge" value="jboss"> JBoss </label>
+					<label> <input type="checkbox" name="knowledge" value="hibernate"> Hibernate </label>
+				</div>	
+			</div>
+
+			<div id="3" class="knowledge hide">		
+				<div class="check-group">
+					<label> <input type="checkbox" name="knowledge" value="laravel"> Laravel </label>
+					<label> <input type="checkbox" name="knowledge" value="cake"> PHPCake </label>
+					<label> <input type="checkbox" name="knowledge" value="codeIgniter"> CodeIgniter </label>
+					<label> <input type="checkbox" name="knowledge" value="zend"> PHPZend </label>
+				</div>	
+			</div>
+			
+			<div id="6" class="knowledge hide">		
+				<div class="check-group">
+					<label> <input type="checkbox" name="knowledge" value="bootstrap"> Bootstrap </label>
+					<label> <input type="checkbox" name="knowledge" value="javascript"> Javascript </label>
+					<label> <input type="checkbox" name="knowledge" value="angularjs"> AngularJS </label>
+					<label> <input type="checkbox" name="knowledge" value="sass"> SASS </label>
+					<label> <input type="checkbox" name="knowledge" value="reactjs"> ReactJS </label>
+				</div>	
+			</div>
+		</div>
+
+		<div class="form-control col-4">
+			<label for="tagsExperience">Experience</label>
+			<select name="tagsExperience" class="experience">
+				<option value="0">Selecione</option>
+				<option value="1">Junior</option>
+				<option value="2">Pleno</option>
+				<option value="3">Senior</option>
+			</select>
+		</div>
+
+		<div class="form-control col-4">
+			<label for="tagsLocal">Local</label>
+			<select name="tagsLocal" class="local">
+				<option value="0">Selecione</option>
+				<option value="1">São Paulo</option>
+				<option value="2">Vancouver</option>
+				<option value="3">New York</option>
+				<option value="4">London</option>
+			</select>
+		</div>
+
+		<div class="form-control col-12">
+			<label for="descricao">Description</label>
+			<textarea name="description" class="description" cols="30" rows="5"></textarea>
+		</div>
+
+		<div class="form-control  col-4">
+			<button type="submit" class="btn-default btn-cadastrar">Publish</button>
+		</div>
+
+	</form>
+
+	<ul class="jobs-list"></ul>
+
+</div>
+
+<div class="modal hide">
+	<div class="modal-content">
+		<a href="#" class="close">x</a>
+		<h2>Advice</h2>
+		<p>Please, fill all fields.</p>
+	</div>
+</div>
+
+<script src="js/vagas.js"></script>	
+</body>
+</html>
